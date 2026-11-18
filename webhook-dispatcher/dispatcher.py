@@ -5,6 +5,7 @@
 from client import MockWebhookClient
 from models import Event, NetworkTimeoutError
 
+
 class WebhookDispatcher:
     def __init__(self, client: MockWebhookClient):
         self.client = client

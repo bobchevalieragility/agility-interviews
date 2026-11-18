@@ -6,7 +6,6 @@
 import time
 
 from client import MockWebhookClient
-# from dispatcher import WebhookDispatcher
 from dispatcher_mod import WebhookDispatcherMod
 from models import Event
 

@@ -6,6 +6,7 @@
 import time
 from dataclasses import dataclass, field
 
+
 @dataclass
 class Event:
     id: str

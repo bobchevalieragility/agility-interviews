@@ -9,6 +9,7 @@ from dataclasses import dataclass
 from client import MockWebhookClient
 from models import Event, NetworkTimeoutError
 
+
 @dataclass
 class DeliveryTask:
     event: Event

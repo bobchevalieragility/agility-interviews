@@ -8,6 +8,7 @@ import time
 
 from models import Event, HttpResponse, NetworkTimeoutError
 
+
 class MockWebhookClient:
     def __init__(self, seed: int = 7):
         self._rng = random.Random(seed)
