@@ -6,6 +6,9 @@
 import time
 
 from client import MockWebhookClient
+
+# from dispatcher import WebhookDispatcher
+# from dispatcher_minheap import WebhookDispatcherMinHeap
 from dispatcher_deque import WebhookDispatcherDeque
 from models import Event
 
@@ -30,6 +33,7 @@ if __name__ == "__main__":
     client = MockWebhookClient(seed=5)
     # dispatcher = WebhookDispatcher(client)
     dispatcher = WebhookDispatcherDeque(client)
+    # dispatcher = WebhookDispatcherMinHeap(client)
 
     events = generate_sample_events()
     print(f"Starting dispatch of {len(events)} events...\n")

@@ -4,9 +4,17 @@
 
 import time
 from collections import deque
+from dataclasses import dataclass
 
 from client import MockWebhookClient
-from models import DeliveryTask, Event, NetworkTimeoutError
+from models import Event, NetworkTimeoutError
+
+
+@dataclass
+class DeliveryTask:
+    event: Event
+    attempts: int = 0
+    next_attempt_at: float = 0.0
 
 
 class WebhookDispatcherDeque:
