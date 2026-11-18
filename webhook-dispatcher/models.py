@@ -1,6 +1,5 @@
 # =====================================================================
 # Datamodels
-# DO NOT MODIFY THIS FILE
 # =====================================================================
 
 import time
@@ -25,3 +24,10 @@ class HttpResponse:
 
 class NetworkTimeoutError(Exception):
     pass
+
+
+@dataclass
+class DeliveryTask:
+    event: Event
+    attempts: int = 0
+    next_attempt_at: float = 0.0
